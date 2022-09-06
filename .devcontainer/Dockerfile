@@ -14,6 +14,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         curl \
         git
 
+# Remove or comment out to use root user
+USER $USERNAME
+
 # goimports updates your Go import lines, adding missing ones and removing unreferenced ones.
 RUN go install golang.org/x/tools/cmd/goimports@latest
 # Simple utility for extracting a JSON representation of the declarations in a Go source file.
@@ -25,6 +28,3 @@ RUN go install golang.org/x/tools/gopls@latest
 RUN go install github.com/uudashr/gopkgs/v2/cmd/gopkgs@latest
 RUN go install github.com/go-delve/delve/cmd/dlv@latest
 RUN go install honnef.co/go/tools/cmd/staticcheck@latest
-
-# Remove or comment out to use root user
-USER $USERNAME
