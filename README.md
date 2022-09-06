@@ -1,2 +1,2 @@
-# vscode-remote-go
-Develop Go in VS Code with a development container
+# VS Code remote Go development container
+Develop Go in VS Code with a Debian based development container
