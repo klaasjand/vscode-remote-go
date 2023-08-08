@@ -8,21 +8,25 @@
     "--security-opt",
     "seccomp=unconfined"
   ],
-  "settings": {
-    "terminal.integrated.profiles.linux": {
-      "bash": {
-        "path": "/bin/bash"
-      }
-    },
-    "go.toolsManagement.checkForUpdates": "local",
-    "go.useLanguageServer": true,
-    "go.gopath": "/go",
-    "go.goroot": "/usr/local/go"
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash"
+          }
+        },
+        "go.toolsManagement.checkForUpdates": "local",
+        "go.useLanguageServer": true,
+        "go.gopath": "/go",
+        "go.goroot": "/usr/local/go"
+      },
+      "extensions": [
+        "golang.Go",
+        "editorconfig.editorconfig"
+      ]
+    }
   },
-  "extensions": [
-    "golang.Go",
-    "editorconfig.editorconfig"
-  ],
   "forwardPorts": [
     8080
   ],
